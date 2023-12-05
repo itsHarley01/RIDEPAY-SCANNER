@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="397dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="30dp"
+        android:text="QR Scanner"
+        android:textColor="#06203D"
+        android:fontFamily="sans-serif-black"
+        android:textAlignment="center">
+    </TextView>
+
+
+    <com.budiyev.android.codescanner.CodeScannerView
+        android:id="@+id/scanner_view"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:autoFocusButtonColor="@android:color/white"
+        app:autoFocusButtonVisible="false"
+        app:flashButtonColor="@android:color/white"
+        app:flashButtonVisible="false"
+
+
+        >
+    </com.budiyev.android.codescanner.CodeScannerView>
+
+    <LinearLayout
+        android:id="@+id/llayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/scanner_view"
+        android:background="#06203D"
+        android:gravity="left">
+
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="175dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:textColor="@color/white" />
+
+        <Switch
+            android:id="@+id/cCam"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="font/back" />
+
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textbox"
+        android:layout_width="402dp"
+        android:layout_height="81dp"
+        android:layout_below="@id/llayout"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:visibility="invisible"></TextView>
+
+    <TextView
+        android:id="@+id/textbox2"
+        android:layout_width="402dp"
+        android:layout_height="81dp"
+        android:layout_below="@+id/textbox"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#DEB15D"
+        android:fontFamily="sans-serif-black"
+        android:textAlignment="center"
+        android:textSize="30dp"></TextView>
+
+</RelativeLayout>
